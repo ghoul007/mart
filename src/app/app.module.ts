@@ -3,12 +3,19 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { ManagerModule } from './manager/manager.module';
+import { InventoryModule } from './inventory/inventory.module';
+import { PosModule } from './pos/pos.module';
+import { UserModule } from './user/user.module';
+import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MaterialModule],
+  declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
+  imports: [BrowserModule,MaterialModule, AppRoutingModule, ManagerModule, InventoryModule, PosModule, UserModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
