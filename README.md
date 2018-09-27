@@ -1,3 +1,6 @@
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/ghoul007/mart.svg?columns=all)](https://waffle.io/ghoul007/mart)
+
+
 # Mart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
