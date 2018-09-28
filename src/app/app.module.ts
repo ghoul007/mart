@@ -16,7 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, PageNotFoundComponent],
-  imports: [HttpClientModule,BrowserModule,MaterialModule, AppRoutingModule, ManagerModule, InventoryModule, PosModule, UserModule, BrowserAnimationsModule],
+  imports: [HttpClientModule,BrowserModule,MaterialModule, ManagerModule, InventoryModule, PosModule, UserModule, BrowserAnimationsModule,AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
