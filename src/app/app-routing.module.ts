@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'manager',    loadChildren: './manager/manager.module#ManagerModule'},
   { path: 'user',    loadChildren: './user/user.module#UserModule'},
+  { path: 'inventory',    loadChildren: './inventory/inventory.module#InventoryModule'},
+  { path: 'pos',    loadChildren: './pos/pos.module#PosModule'},
   { path: '**', component: PageNotFoundComponent },
 ];
 
