@@ -1,12 +1,16 @@
 <mat-toolbar color="primary">
-    <mat-icon svgIcon="ahmed"></mat-icon>
+    <a mat-icon-button routerLink="/home">
+
+        <mat-icon svgIcon="ahmed"></mat-icon>
+    </a>
+
     <button mat-button routerLink="/home">Home</button>
     <span>Mart</span>
     <span class="flex-spacer" [style.width.%]=100></span>
-    <button mat-icon-button>
+    <button routerLink="/user/profile" mat-icon-button>
         <mat-icon class="mat-18">account_circle</mat-icon>
     </button>
-    <button mat-icon-button>
+    <button routerLink="/user/logout" mat-icon-button>
         <mat-icon class="mat-18">lock_open</mat-icon>
     </button>
 </mat-toolbar>
