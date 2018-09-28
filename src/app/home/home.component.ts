@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   template: `
-    <p>
-      home works!
-    </p>
+  <button mat-raised-button color="primary" routerLink="/manager">Login as Manager</button>
   `,
   styles: []
 })
