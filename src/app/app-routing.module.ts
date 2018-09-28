@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'manager',    loadChildren: './manager/manager.module#ManagerModule'},
+  { path: 'user',    loadChildren: './user/user.module#UserModule'},
   { path: '**', component: PageNotFoundComponent },
 ];
 
