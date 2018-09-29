@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InventoryComponent } from './inventory.component';
+import { MaterialModule } from '../material.module';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('InventoryComponent', () => {
   let component: InventoryComponent;
@@ -8,7 +10,9 @@ describe('InventoryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InventoryComponent ]
+      declarations: [ InventoryComponent ],
+      imports:[MaterialModule],
+      schemas:[NO_ERRORS_SCHEMA]
     })
     .compileComponents();
   }));
