@@ -1,14 +1,31 @@
 {
   "name": "mart",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "config": {
+    "imageRepo": "ghoul007/mart",
+    "imageName": "custom_app_name",
+    "imagePort": "3000"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "test": "ng test  --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "prettier": "prettier --write src/app/**/*.ts"
+    "prettier": "prettier --write src/app/**/*.ts",
+    "docker:build": "cross-conf-env docker image build . -t $npm_package_config_imageRepo:$npm_package_version",
+    "postdocker:build": "npm run docker:tag",
+    "docker:tag": " cross-conf-env docker image tag $npm_package_config_imageRepo:$npm_package_version $npm_package_config_imageRepo:latest",
+    "docker:run": "run-s -c docker:clean docker:runHelper",
+    "docker:runHelper": "cross-conf-env docker run -e NODE_ENV=local --name $npm_package_config_imageName -d -p $npm_package_config_imagePort:3000 $npm_package_config_imageRepo",
+    "docker:publish": "cross-conf-env docker   push $npm_package_config_imageRepo:$npm_package_version",
+    "postdocker:publish": "cross-conf-env docker   push $npm_package_config_imageRepo:latest",
+    "docker:clean": "cross-conf-env docker rm -f $npm_package_config_imageName",
+    "docker:taillogs": "cross-conf-env docker logs -f $npm_package_config_imageName",
+    "predocker:debug": "run-s docker:build docker:run",
+    "docker:debug": "run-s  docker:taillogs",
+    "deploy": "npx now   --docker='now' --public"
   },
   "private": true,
   "dependencies": {
