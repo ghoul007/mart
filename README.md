@@ -1,6 +1,6 @@
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/ghoul007/mart.svg?columns=all)](https://waffle.io/ghoul007/mart)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-
+[![CircleCI](https://circleci.com/gh/ghoul007/mart.svg?style=svg)](https://circleci.com/gh/ghoul007/mart)
 # Mart
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
