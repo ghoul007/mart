@@ -17,17 +17,26 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from "@angular/forms";
 import { SimpleDialogComponent } from './common/simple-dialog/simple-dialog.component';
 import { AuthHttpInterceptorService } from "./auth/auth-http-interceptor.service";
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PageNotFoundComponent, LoginComponent, SimpleDialogComponent],
-  imports: [HttpClientModule, ReactiveFormsModule, BrowserModule, MaterialModule, ManagerModule, InventoryModule, PosModule, UserModule, BrowserAnimationsModule, AppRoutingModule],
+  declarations: [
+    AppComponent, HomeComponent, PageNotFoundComponent,
+    LoginComponent, SimpleDialogComponent, NavigationMenuComponent
+  ],
+  imports: [
+    HttpClientModule, ReactiveFormsModule,
+    BrowserModule, MaterialModule, ManagerModule, InventoryModule,
+    PosModule, UserModule, BrowserAnimationsModule, AppRoutingModule
+  ],
   providers: [AuthService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthHttpInterceptorService,
       multi: true,
-    }],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

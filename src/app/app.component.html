@@ -13,4 +13,12 @@
         <mat-icon class="mat-18">lock_open</mat-icon>
     </button>
 </mat-toolbar>
-<router-outlet></router-outlet>
+
+<mat-sidenav-container class="app-sidenav-container" >
+    <mat-sidenav #sidenav  fixedTopGap="56">
+        <app-navigation-menu></app-navigation-menu>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet class="app-container"></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
