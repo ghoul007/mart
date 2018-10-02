@@ -10,7 +10,7 @@ export class UiService {
 
   constructor(private snackBar: MatSnackBar, private dialog: MatDialog) { }
 
-  showToast(message: string, action: string, config?: MatSnackBarConfig) {
+  showToast(message: string, action?: string, config?: MatSnackBarConfig) {
     this.snackBar.open(
       message,
       action,
